@@ -37,6 +37,28 @@ data class Task(
 - done → Whether the task is completed
 
 ### Functions (TaskFunctions.kt):
+```
+fun addTask(list: List<Task>, task: Task): List<Task> { return list + task }
+
+fun toggleDone(list: List<Task>, id: Int): List<Task> {
+    return list.map { task ->
+        if (task.id == id) { task.copy(done = !task.done) }
+        else { task }
+    }
+}
+
+fun filterByDone(list: List<Task>, done: Boolean): List<Task> {
+    return list.filter { task ->
+        task.done == done
+    }
+}
+
+fun sortByDueDate(list: List<Task>): List<Task> {
+    return list.sortedBy { task ->
+        task.dueDate
+    }
+}
+```
 
 - addTask(list: List<Task>, task: Task): List<Task> → Adds a new task to the list
 - toggleDone(list: List<Task>, id: Int): List<Task> → Toggles the done state of a task
