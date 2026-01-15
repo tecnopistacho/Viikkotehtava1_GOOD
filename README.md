@@ -70,7 +70,9 @@ fun sortByDueDate(list: List<Task>): List<Task> {
 
 ## Screenshots
 
-*(Optional: add screenshots here if you have them)*
+![Home Page](image1.png)
+
+![Filtered by Done](image2.png)
 
 ---
 
