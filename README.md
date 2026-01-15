@@ -100,3 +100,7 @@ fun sortByDueDate(list: List<Task>): List<Task> {
 
 ---
 
+## Video Presentation
+
+Watch the video presentation of the app here: [Kotlin Perusteet](https://www.youtube.com/watch?v=NRWsiEtdwRg)
+
