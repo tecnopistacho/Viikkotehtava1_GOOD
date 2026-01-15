@@ -18,7 +18,8 @@ Users can **view tasks, add new tasks, mark tasks as done, filter, and sort task
 
 ## Data Model and Functions
 
-```kotlin
+### Data class (Task.kt)
+```
 data class Task(
     val id: Int,
     val title: String,
@@ -26,7 +27,21 @@ data class Task(
     val priority: Int,
     val dueDate: String,
     val done: Boolean
-)```
+)
+```
+- id → Unique identifier of the task
+- title → Short task name
+- description → Additional details
+- priority → Task priority (1 = low, 2 = medium, etc.)
+- dueDate → String representing the deadline
+- done → Whether the task is completed
+
+### Functions (TaskFunctions.kt):
+
+- addTask(list: List<Task>, task: Task): List<Task> → Adds a new task to the list
+- toggleDone(list: List<Task>, id: Int): List<Task> → Toggles the done state of a task
+- filterByDone(list: List<Task>, done: Boolean): List<Task> → Returns tasks that match the done state
+- sortByDueDate(list: List<Task>): List<Task> → Sorts the tasks by dueDate
 
 
 ---
